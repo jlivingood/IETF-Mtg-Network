@@ -79,7 +79,7 @@
 	<rfc
 	  xmlns:xi="http://www.w3.org/2001/XInclude"
 	  category="info"
-	  docName="draft-livingood-meeting-network"
+	  docName="draft-livingood-meeting-network-00"
 	  ipr="trust200902"
 	  obsoletes=""
 	  updates=""
@@ -93,7 +93,7 @@
 	  <front>
 	
 	    <title abbrev="IETF Meeting Network Recommendations">IETF Meeting Network Recommendations</title>
-	    <seriesInfo name="Internet-Draft" value="draft-livingood-meeting-network"/>
+	    <seriesInfo name="Internet-Draft" value="draft-livingood-meeting-network-00"/>
 	
 	    <!-- add 'role="editor"' below for the editors if appropriate -->
 	    <author fullname="Jason Livingood" initials="J" surname="Livingood">
@@ -156,7 +156,6 @@
 	
 	    
 	    <section title="Key Requirements">
-		<t>
 			<ol type="REQ%d:" group="reqs">
   				<li>Highly reliable and performant network with no experiments that may potentially cause disruptions to mission-critical 
 					standards development work (e.g., working group sessions).</li>
@@ -168,12 +167,10 @@
 				<li>A public network performance dashboard and associated real-time and post-meeting reports shall be maintained, 
 					available to all network users.</li>
 			</ol>
-		</t>
 
 		</section>
 		
 	<section title="Network Experiments">
-		<t>
 			<ul>
 				<li>Network experiments MUST only occur on the Hackathon Network, which is a separate network form the Meeting Network.</li>
 				<li>The Hackathon Network will run for the entirety of the IETF meeting, not just during the Hackathon.</li>
@@ -181,39 +178,38 @@
 					support for experimental new protocols or other experiments. These requests will thus be decided based on community 
 				feedback.</li>
 			</ul>
-		</t>
 			
         </section>
 	    
 	    <section title="Extension of IETF Network to Hotels">
 
-		<t>
+
 			<ul>
 				<li>Hotel networks are now sufficiently performant that this is no longer the technical limitation that it was 10 or 20 
 					years ago; it is time to move on.</li>
 				<li>If there are potential issues with filtering, participants can use a VPN (as most do anyway).</li>
 				<li>Thus, the IETF meeting network MUST NOT be extended to hotel rooms any longer.</li>
 			</ul>
-		</t>
+
 	    
 
 	    	</section>
 	    
 
         <section title="Wireless Networks">
- 		<t>
+
 			<ul>
 				<li>There shall be only one wireless network (Service Set Identifier, SSID) for the Meeting Network: IETF</li>
 				<li>There shall be only one wireless network (SSID) for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
 				<li>The wireless network shall require authentication, using the most recent widely supported standard.</li>
 			</ul>
-		</t>
+
   
         </section>
 
        <section title="Real-Time Reporting"> 
 
-		<t>
+
 			<ul>
 				<li>All data concerning the performance of the network should be made available transparently for all participants to see, both 
 					during and after the meeting.</li>
@@ -226,34 +222,33 @@
 				<li>ECN tracking (e.g., volume with no ECN, ECT(1), CE).</li>
 				<li>All aspects of Wi-Fi performance (e.g., by room, specific AP, etc.).</li>
 			</ul>
-		</t>
+	
         </section>
 
 	    <section title="Post-Meeting Reporting">
 		    
-		<t>
+
 			<ul>
 				<li>Within 1 week of the shut down of the network a final network performance and incident(s) report 
 					shall be sent to the community and posted on the IETF website.</li>
 			</ul>
-		</t>
+
 
 	    </section>
 	    
 	    
 	    <section title="Geo-IP Data"> 
-		<t>
+
 			<ul>
 				<li>Geo-IP data shall be updated to the next IETF meeting's location within 1 week of the end of the prior IETF meeting, 
 					so that Geo-IP databases pick up the change of geography well before the next IETF meeting.</li>
 			</ul>
-		</t>        
+      
 	    </section>
 
-            </section>
 
         <section title="Cost Management">
-				<t>
+	
 			<ul>
 				<li>Total meeting network cost in 2024 was roughly $850,000. At 1,000 attendees per meeting and 3 meetings per year, 
 					851,000/3,000 = $283 per participant for each meeting. If this cost was reduced, it could enable a material 
@@ -262,11 +257,11 @@
 				<li>One potential parallel activity could be to have an *independent* team study these costs and 
 					make recommendations on how to reduce them.</li>
 			</ul>
-		</t>
+	
 	</section>
         
         <section title="Questions About Roles and Responsibilities">
-				<t>
+			
 			<ul>
 				<li>Lines of reporting may benefit from greater clarification.</li>
 				<li>The community may want to consider asking the NOC Lead contractor to regularly report to the IESG and IETF LLC concerning 
@@ -274,7 +269,7 @@
 				<li>Should the IESG establish an community oversight mechanism for the meeting network operations 
 					function (e.g., via GEN Area)?</li>
 			</ul>
-		</t>
+		
         
         </section>
         
