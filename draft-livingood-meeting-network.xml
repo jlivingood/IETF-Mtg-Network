@@ -22,8 +22,8 @@
 	<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 	<!-- Processing Instructions- PIs (for a complete list and description,
 	     see file http://xml.resource.org/authoring/README.html.
-	     You may find that some sphisticated editors are not able to edit PIs when palced here.
-	     An alternative position is just inside the rfc elelment as noted below. -->
+	     You may find that some sophisticated editors are not able to edit PIs when placed here.
+	     An alternative position is just inside the rfc element as noted below. -->
 	<!-- Some of the more generally applicable PIs that most I-Ds might want to use -->
 	<!-- Try to enforce the ID-nits conventions and DTD validity -->
 	<?rfc strict="yes" ?>
@@ -38,7 +38,7 @@
 	     beginning of each paragraph of text. -->
 	<?rfc editing="no" ?>
 	<!-- Create Table of Contents (ToC) and set some options for it.  
-	     Note the ToC may be omitted for very short documents,but idnits insists on a ToC 
+	     Note the ToC may be omitted for very short documents, but idnits insists on a ToC 
 	     if the document has more than 15 pages. -->
 	<?rfc toc="yes"?>
 	<?rfc tocompact="yes"?>
@@ -126,7 +126,7 @@
 
 	    <abstract>
 	      <t>IETF participants need a highly reliable and responsive network, with sufficient bandwidth to avoid congestion, that enables work 
-		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
+		      to be conducted without interruption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
 		      participation in working group meetings. This document makes suggestions about how to reduce complexity, reduce cost, and 
 		      increase reliability of the IETF meeting network, which may be helpful in community discussion.</t>
@@ -144,7 +144,7 @@
 	    <section title="Introduction">
 			    
 		<t>IETF participants need a highly reliable and responsive network, with sufficient bandwidth to avoid congestion, that enables work 
-		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
+		      to be conducted without interruption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
 		      participation in working group meetings. This document makes suggestions about how to reduce complexity, reduce cost, and 
 		      increase reliability of the IETF meeting network, which may be helpful in community discussion</t>
@@ -204,7 +204,7 @@
  		<t>
 			<ul>
 				<li>There shall be only one wireless network (Service Set Identifier, SSID) for the Meeting Network: IETF</li>
-				<li>There shall be only one wireless netwkork (SSID) for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
+				<li>There shall be only one wireless network (SSID) for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
 				<li>The wireless network shall require authentication, using the most recent widely supported standard.</li>
 			</ul>
 		</t>
