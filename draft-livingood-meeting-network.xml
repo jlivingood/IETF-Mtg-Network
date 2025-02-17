@@ -125,11 +125,11 @@
 	
 
 	    <abstract>
-	      <t>IETF participants need a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
+	      <t>IETF participants need a highly reliable and responsive network, with sufficient bandwidth to avoid congestion, that enables work 
 		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
-		      participation in working group meetings. This document makes recommendations about how to reduce complexity, reduce cost, and 
-		      increase reliability of the IETF meeting network.</t>
+		      participation in working group meetings. This document makes suggestions about how to reduce complexity, reduce cost, and 
+		      increase reliability of the IETF meeting network, which may be helpful in community discussion.</t>
 	    </abstract>
 	
 		
@@ -143,11 +143,11 @@
 
 	    <section title="Introduction">
 			    
-		<t>IETF participants need a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
+		<t>IETF participants need a highly reliable and responsive network, with sufficient bandwidth to avoid congestion, that enables work 
 		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
-		      participation in working group meetings. This document makes recommendations about how to reduce complexity, reduce cost, and 
-		      increase reliability of the IETF meeting network.</t>
+		      participation in working group meetings. This document makes suggestions about how to reduce complexity, reduce cost, and 
+		      increase reliability of the IETF meeting network, which may be helpful in community discussion</t>
 
 		<t>In the past, approaches to revise network requirements started from the point at which the IETF currently operates. This risks 
 		burdening such an exercise with old assumptions and requirements. This analysis, in contrast, is an idealized redesign that asks "if we were 
@@ -158,13 +158,15 @@
 	    <section title="Key Requirements">
 		<t>
 			<ol type="REQ%d:" group="reqs">
-  				<li>Highly reliable and performant network with no experiments to potentially cause disruptions.</li>
-  				<li>Support for network experiments via a separate Hackathon network.</li>
-				<li>Redundant upstream connectivity to the internet.</li>
-				<li>Native dual stack for all devices on the network - IPv4 and IPv6.</li>
-				<li>Support for the most-recent IEEE Wi-Fi standard with ubiquitous Wi-Fi available in the meeting venue.</li>
-				<li>Public ticketing system to report issues, as well as track/report status or closure.</li>
-				<li>Public network performance dashboard and associated reports.</li>
+  				<li>Highly reliable and performant network with no experiments that may potentially cause disruptions to mission-critical 
+					standards development work (e.g., working group sessions).</li>
+  				<li>Support for network experiments shall be supported via a functionally separate Hackathon network.</li>
+				<li>Redundant upstream connectivity to the internet shall be maintained, to hedge the risk of outage in case of path failure.</li>
+				<li>Native dual stack shall be supported for all devices on the network - IPv4 and IPv6.</li>
+				<li>The most-recent IEEE Wi-Fi standard shall be supported, delivering ubiquitous Wi-Fi available in the entire meeting venue.</li>
+				<li>A public ticketing system shall be used to report issues, as well as track/report status or closure to all network users.</li>
+				<li>A public network performance dashboard and associated real-time and post-meeting reports shall be maintained, 
+					available to all network users.</li>
 			</ol>
 		</t>
 
@@ -175,8 +177,9 @@
 			<ul>
 				<li>Network experiments MUST only occur on the Hackathon Network, which is a separate network form the Meeting Network.</li>
 				<li>The Hackathon Network will run for the entirety of the IETF meeting, not just during the Hackathon.</li>
-				<li>Participants may use a public ticketing system (with support for up-voting to support prioritization) to request 
-					support for experimental new protocols or other experiments.</li>
+				<li>Participants shall use the public ticketing system (with support for up-voting to support prioritization) to request 
+					support for experimental new protocols or other experiments. These requests will thus be decided based on community 
+				feedback.</li>
 			</ul>
 		</t>
 			
@@ -186,9 +189,10 @@
 
 		<t>
 			<ul>
-				<li>Hotel networks are now sufficiently performant that this is no longer an issue.</li>
+				<li>Hotel networks are now sufficiently performant that this is no longer the technical limitation that it was 10 or 20 
+					years ago; it is time to move on.</li>
 				<li>If there are potential issues with filtering, participants can use a VPN (as most do anyway).</li>
-				<li>The IETF meeting network MUST NOT be extended to hotels any longer.</li>
+				<li>Thus, the IETF meeting network MUST NOT be extended to hotel rooms any longer.</li>
 			</ul>
 		</t>
 	    
@@ -196,12 +200,12 @@
 	    	</section>
 	    
 
-        <section title="Wireless SSIDs">
+        <section title="Wireless Networks">
  		<t>
 			<ul>
-				<li>There shall be only one SSID for the Meeting Network: IETF</li>
-				<li>There shall be only one SSID for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
-				<li>The wireless network shall require authentication</li>
+				<li>There shall be only one wireless network (Service Set Identifier, SSID) for the Meeting Network: IETF</li>
+				<li>There shall be only one wireless netwkork (SSID) for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
+				<li>The wireless network shall require authentication, using the most recent widely supported standard.</li>
 			</ul>
 		</t>
   
@@ -211,15 +215,16 @@
 
 		<t>
 			<ul>
-				<li>All data concerning the performance of the network should be made available transparently for all participants to see.</li>
-				<li>The Network Operations Center (NOC) shall provide a real-time or near-real-time dashboard of all key network statistics</li>
-				<li>Reporting using IPFIX (NetFlow) that shows the source/destination of network flows</li>
-				<li>Bandwidth tracking of peak usage</li>
-				<li>Transport protocol tracking (e.g., volume of TCP, UDP, QUIC)</li>
-				<li>Application protocol tracking (e.g., volume of SMTP, HTTP, etc.)</li>
-				<li>DSCP mark tracking (e.g., volume by DSCP code point)</li>
-				<li>ECN tracking (e.g., volume with no ECN, ECT(1), CE)</li>
-				<li>All aspects of Wi-Fi performance (e.g., by room, specific AP, etc.)</li>
+				<li>All data concerning the performance of the network should be made available transparently for all participants to see, both 
+					during and after the meeting.</li>
+				<li>The Network Operations Center (NOC) shall provide a real-time or near-real-time dashboard of all key network statistics.</li>
+				<li>Reporting using IPFIX (NetFlow) that shows the source/destination of network flows.</li>
+				<li>Bandwidth tracking of peak usage.</li>
+				<li>Transport protocol tracking (e.g., volume of TCP, UDP, QUIC).</li>
+				<li>Application protocol tracking (e.g., volume of SMTP, HTTP, etc.).</li>
+				<li>DSCP mark tracking (e.g., volume by DSCP code point).</li>
+				<li>ECN tracking (e.g., volume with no ECN, ECT(1), CE).</li>
+				<li>All aspects of Wi-Fi performance (e.g., by room, specific AP, etc.).</li>
 			</ul>
 		</t>
         </section>
@@ -239,7 +244,7 @@
 	    <section title="Geo-IP Data"> 
 		<t>
 			<ul>
-				<li>Shall be updated to the IETF meeting location within 1 week of the end of the prior IETF meeting, 
+				<li>Geo-IP data shall be updated to the next IETF meeting's location within 1 week of the end of the prior IETF meeting, 
 					so that Geo-IP databases pick up the change of geography well before the next IETF meeting.</li>
 			</ul>
 		</t>        
@@ -253,19 +258,21 @@
 				<li>Total meeting network cost in 2024 was roughly $850,000. At 1,000 attendees per meeting and 3 meetings per year, 
 					851,000/3,000 = $283 per participant for each meeting. If this cost was reduced, it could enable a material 
 					reduction in meeting registration fees.</li>
-				<li>A key activity is to have an independent team study these costs and make recommendations on how to reduce them.</li>
+				<li>Cost can be reduced by reducing complexity (see prior sections).</li>
+				<li>One potential parallel activity could be to have an *independent* team study these costs and 
+					make recommendations on how to reduce them.</li>
 			</ul>
 		</t>
 	</section>
         
-        <section title="Clarity on Roles and Responsibilities">
+        <section title="Questions About Roles and Responsibilities">
 				<t>
 			<ul>
-				<li>Lines of reporting may need to be clarified.</li>
-				<li>The NOC Lead contractor is responsible to regularly report to the IESG and IETF LLC concerning 
+				<li>Lines of reporting may benefit from greater clarification.</li>
+				<li>The community may want to consider asking the NOC Lead contractor to regularly report to the IESG and IETF LLC concerning 
 					meeting network operations.</li>
-				<li>The IESG shall establish an appropriate community oversight mechanism for the meeting network operations 
-					function (e.g., via GEN Area).</li>
+				<li>Should the IESG establish an community oversight mechanism for the meeting network operations 
+					function (e.g., via GEN Area)?</li>
 			</ul>
 		</t>
         
