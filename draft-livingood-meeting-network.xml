@@ -125,7 +125,7 @@
 	
 
 	    <abstract>
-	      <t>IETF participants want a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
+	      <t>IETF participants need a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
 		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
 		      participation in working group meetings. This document makes recommendations about how to reduce complexity, reduce cost, and 
@@ -143,71 +143,131 @@
 
 	    <section title="Introduction">
 			    
-		<t>IETF participants want a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
+		<t>IETF participants need a highly reliable and responsive network, with sufficient bandwidtht to avoid congestion, that enables work 
 		      to be conducted without interuption or network limitation during an IETF meeting. Such a network enables in-person network attendees 
 		      to get their work done. It also enables remote participants to have a good experience as well, via remote 
 		      participation in working group meetings. This document makes recommendations about how to reduce complexity, reduce cost, and 
 		      increase reliability of the IETF meeting network.</t>
+
+		<t>In the past, approaches to revise network requirements started from the point at which the IETF currently operates. This risks 
+		burdening such an exercise with old assumptions and requirements. This analysis, in contrast, is an idealized redesign that asks "if we were 
+		building the IETF network from scratch today, what should it look like?".</t>
 	    </section>
 	
 	    
 	    <section title="Key Requirements">
-		   
+		<t>
+			<ol type="REQ%d:" group="reqs">
+  				<li>Highly reliable and performant network with no experiments to potentially cause disruptions.</li>
+  				<li>Support for network experiments via a separate Hackathon network.</li>
+				<li>Redundant upstream connectivity to the internet.</li>
+				<li>Native dual stack for all devices on the network - IPv4 and IPv6.</li>
+				<li>Support for the most-recent IEEE Wi-Fi standard with ubiquitous Wi-Fi available in the meeting venue.</li>
+				<li>Public ticketing system to report issues, as well as track/report status or closure.</li>
+				<li>Public network performance dashboard and associated reports.</li>
+			</ol>
+		</t>
+
 		</section>
 		
 	<section title="Network Experiments">
+		<t>
+			<ul>
+				<li>Network experiments MUST only occur on the Hackathon Network, which is a separate network form the Meeting Network.</li>
+				<li>The Hackathon Network will run for the entirety of the IETF meeting, not just during the Hackathon.</li>
+				<li>Participants may use a public ticketing system (with support for up-voting to support prioritization) to request 
+					support for experimental new protocols or other experiments.</li>
+			</ul>
+		</t>
 			
         </section>
 	    
 	    <section title="Extension of IETF Network to Hotels">
 
-        <t>Before proceeding into deployment recommendations, it is important to first explore a few key concepts 
-        about low latency networking. This is critical because in the past many networks have thought of only 
-        bandwidth and/or priority at the sole network attributes that could be adjusted in order to improve 
-        application or network quality. The advent of low latency networking forces a re-examination of those 
-        old assumptions, as we take into account the profound impact that latency and jitter have on the quality of 
-        the end user experience.</t>
+		<t>
+			<ul>
+				<li>Hotel networks are now sufficiently performant that this is no longer an issue.</li>
+				<li>If there are potential issues with filtering, participants can use a VPN (as most do anyway).</li>
+				<li>The IETF meeting network MUST NOT be extended to hotels any longer.</li>
+			</ul>
+		</t>
 	    
 
 	    	</section>
 	    
 
         <section title="Wireless SSIDs">
-        <t></t>
+ 		<t>
+			<ul>
+				<li>There shall be only one SSID for the Meeting Network: IETF</li>
+				<li>There shall be only one SSID for Network Experiments (unless a special SSID is required as part of an experiment): IETF-Hackathon</li>
+				<li>The wireless network shall require authentication</li>
+			</ul>
+		</t>
   
         </section>
 
        <section title="Real-Time Reporting"> 
 
-        <t>Determine whether your application needs "sparse" flows or "congestion-controlled" (higher capacity) 
-        flows. Sparse flows that are latency senstive should be marked as NQB (thus DSCP-45). This may be things 
-        like DNS queries or VoIP media flows, where maximizing the bandwidth of the flow is not necesary.</t>
-
+		<t>
+			<ul>
+				<li>All data concerning the performance of the network should be made available transparently for all participants to see.</li>
+				<li>The Network Operations Center (NOC) shall provide a real-time or near-real-time dashboard of all key network statistics</li>
+				<li>Reporting using IPFIX (NetFlow) that shows the source/destination of network flows</li>
+				<li>Bandwidth tracking of peak usage</li>
+				<li>Transport protocol tracking (e.g., volume of TCP, UDP, QUIC)</li>
+				<li>Application protocol tracking (e.g., volume of SMTP, HTTP, etc.)</li>
+				<li>DSCP mark tracking (e.g., volume by DSCP code point)</li>
+				<li>ECN tracking (e.g., volume with no ECN, ECT(1), CE)</li>
+				<li>All aspects of Wi-Fi performance (e.g., by room, specific AP, etc.)</li>
+			</ul>
+		</t>
         </section>
 
 	    <section title="Post-Meeting Reporting">
 		    
-            <t>This section will then conclude with key deployment decisions, which have both operational as well as 
-            technology policy implications.</t> 
+		<t>
+			<ul>
+				<li>Within 1 week of the shut down of the network a final network performance and incident(s) report 
+					shall be sent to the community and posted on the IETF website.</li>
+			</ul>
+		</t>
 
 	    </section>
 	    
 	    
 	    <section title="Geo-IP Data"> 
-		    
-		    <t>Any application provider should be able to mark their traffic for the low latency queue, with no restrictions 
-		    other than standards compliance or other reasonable and openly documented technical guidelines. This 
-		    maintains the loose cross-layer coupling that is a key tenet of the Internet's architecture by eliminating 
-		   the need for application providers and networks to coordinate and creates an environment of so-called "permissionless innovation".</t> 
-		               
+		<t>
+			<ul>
+				<li>Shall be updated to the IETF meeting location within 1 week of the end of the prior IETF meeting, 
+					so that Geo-IP databases pick up the change of geography well before the next IETF meeting.</li>
+			</ul>
+		</t>        
 	    </section>
 
             </section>
 
         <section title="Cost Management">
+				<t>
+			<ul>
+				<li>Total meeting network cost in 2024 was roughly $850,000. At 1,000 attendees per meeting and 3 meetings per year, 
+					851,000/3,000 = $283 per participant for each meeting. If this cost was reduced, it could enable a material 
+					reduction in meeting registration fees.</li>
+				<li>A key activity is to have an independent team study these costs and make recommendations on how to reduce them.</li>
+			</ul>
+		</t>
 	</section>
         
         <section title="Clarity on Roles and Responsibilities">
+				<t>
+			<ul>
+				<li>Lines of reporting may need to be clarified.</li>
+				<li>The NOC Lead contractor is responsible to regularly report to the IESG and IETF LLC concerning 
+					meeting network operations.</li>
+				<li>The IESG shall establish an appropriate community oversight mechanism for the meeting network operations 
+					function (e.g., via GEN Area).</li>
+			</ul>
+		</t>
         
         </section>
         
